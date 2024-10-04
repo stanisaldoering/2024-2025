@@ -14,7 +14,8 @@ def ileA(n):
     if ile>len(n)*0.3:
         return True
     return True
-
+# wyszukaj inedksy genow spelniajce nasepujace kryteria:
+# gen musi byc dlzuszy niz 30 elementow oraz zawierac sekwencje AAABBB przynajemniej dwa razy
 def zadanie(d):
     t=[]
     for i in d:
