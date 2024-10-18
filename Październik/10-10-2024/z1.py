@@ -43,5 +43,47 @@ czw=[]
 pt=[]
 sb=[]
 ndz=[]
+for i, j in enumerate(tmplist):
+    if i%7==0:
+        pt.append(j)
+    if i%7==1:
+        sb.append(j)
+sredniapt=sum(pt)/len(pt)
+sredniasb=sum(sb)/len(sb)
+print(sredniapt)
+print(sredniasb)
 
-pt.append(tmplist[0]+7)
+for z in range(7):
+    d=[]
+    for i,j in enumerate(tmplist):
+        if i %7 ==z:
+            d.append(j)
+    srednia=sum(d)/len(d)
+    print(srednia)
+
+ # w jakim okresie podaj daty wystapił najdluszy ciagnik w ktorym teperatatura byla nizsza w niz w dniu poprzednim podaj taki okres
+p=[]
+for k in dane.items():
+    p.append(k)
+print(p)
+
+data=[]
+tmp = []
+for n in range(len(p)-1):
+    if p[n][1]>p[n+1][1]:
+        tmp.append(p[n])
+    else:
+        if len(data) < len(tmp):
+            data = tmp
+            tmp = []
+        else:
+            tmp = []
+print(data)
+# podaj ile dni w miesiacu kwietniu jest temperatura wyzsza od temeratury dzien wczesniej
+kw=[]
+a='4'
+for i in range(len(p)-1):
+    if a is p[i]:
+        kw.append(p[i])
+print(kw)
+
